@@ -1,6 +1,6 @@
-# persistence-attack-detection
+# Persistence Attack Detection
 
-This project demonstrates detection of common persistence mechanisms used by attackers.
+This project demonstrates detection of common persistence techniques used by attackers to maintain access on a system.
 
 ## Techniques Covered
 
@@ -11,8 +11,8 @@ This project demonstrates detection of common persistence mechanisms used by att
 
 - Behavioral detection using Python
 - Multi-signal correlation to reduce false positives
-- Sigma rules for SIEM integration
+- Sigma rules for SIEM-based detection
 
-## Why It Matters
+## Why This Matters
 
-Persistence allows attackers to maintain access after reboot, making it a critical detection area.
+Persistence allows attackers to survive reboots and maintain long-term access, making it a critical phase in the attack lifecycle.
