@@ -1,3 +1,4 @@
+# Detect persistence via Run keys or scheduled tasks combined with suspicious execution
 import json
 
 with open("persistence.json", "r") as file:
