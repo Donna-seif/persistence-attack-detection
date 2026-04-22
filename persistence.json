@@ -7,7 +7,7 @@
   {
     "EventType": "ScheduledTask",
     "TaskName": "Updater",
-    "Command": "evil.exe"
+    "Command": "powershell.exe -ExecutionPolicy Bypass -enc abc123"
   },
   {
     "EventType": "Registry",
