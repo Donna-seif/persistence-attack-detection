@@ -16,3 +16,11 @@ This project demonstrates detection of common persistence techniques used by att
 ## Why This Matters
 
 Persistence allows attackers to survive reboots and maintain long-term access, making it a critical phase in the attack lifecycle.
+
+## Detection Logic
+
+The detection focuses on:
+
+- Identifying auto-start mechanisms (Run keys, scheduled tasks)
+- Correlating with suspicious command execution
+- Avoiding single-signal detection to reduce false positives
