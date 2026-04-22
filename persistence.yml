@@ -1,0 +1,26 @@
+title: Suspicious Persistence Mechanism
+description: Detects potential persistence via registry run keys or scheduled tasks
+logsource:
+  category: registry_event
+
+detection:
+  selection_registry:
+    TargetObject|contains: "\\Run"
+
+  selection_task:
+    CommandLine|contains: "schtasks"
+
+  selection_suspicious:
+    CommandLine|contains:
+      - "powershell"
+      - "cmd.exe"
+      - "wscript"
+      - "cscript"
+
+  condition: (selection_registry or selection_task) and selection_suspicious
+
+level: medium
+
+falsepositives:
+  - Legitimate software auto-start entries
+  - Administrative scripts creating scheduled tasks
